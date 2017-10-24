@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { TourOfHeroesComponent } from './tourofheroes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    TourOfHeroesComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    TourOfHeroesComponent
+  ]
 })
-export class AppModule { }
+export class TourOfHeroesModule { }
