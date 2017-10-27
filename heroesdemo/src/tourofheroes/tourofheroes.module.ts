@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule} from '@angular/material';
 
 import { TourOfHeroesComponent } from './tourofheroes.component';
 
@@ -11,7 +11,11 @@ import { TourOfHeroesComponent } from './tourofheroes.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule
   ],
   providers: [],
   bootstrap: [
