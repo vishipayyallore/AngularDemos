@@ -1,17 +1,29 @@
-  <mat-toolbar color="primary">
-      <span>{{title}}</span>
-      <span class="example-spacer"></span>
-      <button mat-button><mat-icon>menu</mat-icon> Menu</button>
-      </mat-toolbar>
-      <mat-menu>
-      <button mat-menu-item> Settings </button>
-      <button mat-menu-item> Contact </button>
-      </mat-menu>
+<mat-toolbar color="primary">
+  <h1>{{title}}</h1>
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon> Menu
+  </button>
+</mat-toolbar>
 
-<h1>{{title}}</h1>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item> Settings </button>
+  <button mat-menu-item> Contact </button>
+</mat-menu>
+
 <h2>{{hero.name}} details!</h2>
-<div><label>id: </label>{{hero.id}}</div>
+<div>
+  <label>id: </label>{{hero.id}}</div>
 <div>
   <label>name: </label>
   <input type="text" [(ngModel)]="hero.name" placeholder="name" />
+</div>
+
+<br>
+<div>
+  <footer>
+    <mat-toolbar color="primary">
+      <span>Footer Information</span>
+    </mat-toolbar>
+  </footer>
 </div>

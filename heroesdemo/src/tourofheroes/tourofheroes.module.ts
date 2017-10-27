@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule } from '@angular/material';
 
 import { TourOfHeroesComponent } from './tourofheroes.component';
 
@@ -12,10 +13,14 @@ import { TourOfHeroesComponent } from './tourofheroes.component';
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule
+    MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [
