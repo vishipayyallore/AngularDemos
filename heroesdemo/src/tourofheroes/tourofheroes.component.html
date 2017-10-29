@@ -11,12 +11,18 @@
   <button mat-menu-item> Contact </button>
 </mat-menu>
 
+
 <h2>{{hero.name}} details!</h2>
+
 <div>
-  <label>id: </label>{{hero.id}}</div>
+  <mat-form-field>
+    <input matInput="text" [(ngModel)]="hero.id" disabled  placeholder="Hero Id">
+  </mat-form-field>
+</div>
 <div>
-  <label>name: </label>
-  <input type="text" [(ngModel)]="hero.name" placeholder="name" />
+  <mat-form-field>
+    <input matInput="text" [(ngModel)]="hero.name" placeholder="Hero Name">
+  </mat-form-field>
 </div>
 
 <br>
