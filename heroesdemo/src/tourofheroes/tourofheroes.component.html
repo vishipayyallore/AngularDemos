@@ -10,7 +10,6 @@
   <button mat-menu-item> Settings </button>
   <button mat-menu-item> Contact </button>
 </mat-menu>
-
 <br>
 
 <mat-card>
@@ -20,13 +19,12 @@
     </mat-card-title>
   </mat-card-header>
 
-  <div>
-    <ul class="heroes">
-      <li>
-        <!-- each hero goes here -->
-      </li>
-    </ul>
-  </div>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroesList" (click)="onSelect(hero)" >
+      <!-- each hero goes here -->
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+  </ul>
 </mat-card>
 
 <mat-card>

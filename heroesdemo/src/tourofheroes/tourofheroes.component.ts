@@ -10,11 +10,16 @@ import { HEROES } from './models/Heroes';
 })
 export class TourOfHeroesComponent {
   title = 'Tour of Heroes';
-  heroes = HEROES;
+  heroesList = HEROES;
+  selectedHero: Hero;
 
   hero: Hero = {
     id: 1,
     name: 'Windstorm'
   };
+
+  onSelect(hero: Hero): void{
+    this.selectedHero = hero;
+  }
 
 }
