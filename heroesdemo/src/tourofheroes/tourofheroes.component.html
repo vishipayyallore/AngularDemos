@@ -19,33 +19,60 @@
     </mat-card-title>
   </mat-card-header>
 
-  <ul class="heroes">
-    <li *ngFor="let hero of heroesList" (click)="onSelect(hero)" >
-      <!-- each hero goes here -->
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </li>
-  </ul>
+  <table cellpadding="0" cellspacing="1">
+    <tr>
+      <td>
+        <ul class="heroes">
+          <li *ngFor="let hero of heroesList" (click)="onSelect(hero)">
+            <!-- each hero goes here -->
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+          </li>
+        </ul>
+
+      </td>
+      <td>&nbsp;</td>
+      <td valign="top">
+        <div *ngIf="selectedHero">
+          <h2>{{selectedHero.name}} details!</h2>
+          <div>
+            <mat-form-field>
+              <input matInput="text" [(ngModel)]="selectedHero.id" disabled placeholder="Hero Id">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <input matInput="text" [(ngModel)]="selectedHero.name" placeholder="Hero Name">
+            </mat-form-field>
+          </div>
+
+        </div>
+      </td>
+    </tr>
+  </table>
+
 </mat-card>
 
+<!--
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h2>{{hero.name}} details!</h2>
+      <h2>{{selectedHero.name}} details!</h2>
     </mat-card-title>
   </mat-card-header>
 
   <div>
     <mat-form-field>
-      <input matInput="text" [(ngModel)]="hero.id" disabled placeholder="Hero Id">
+      <input matInput="text" [(ngModel)]="selectedHero.id" disabled placeholder="Hero Id">
     </mat-form-field>
   </div>
   <div>
     <mat-form-field>
-      <input matInput="text" [(ngModel)]="hero.name" placeholder="Hero Name">
+      <input matInput="text" [(ngModel)]="selectedHero.name" placeholder="Hero Name">
     </mat-form-field>
   </div>
 
 </mat-card>
+-->
 
 <br>
 <div>
