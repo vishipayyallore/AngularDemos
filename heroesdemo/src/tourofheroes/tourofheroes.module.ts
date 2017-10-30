@@ -2,15 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule, 
+import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule,
   MatInputModule, MatToolbarModule, MatIconModule } from '@angular/material';
 
 import { TourOfHeroesComponent } from './tourofheroes.component';
+import { HeroDetailComponent } from './herodetail/hero-detail.component';
 
 @NgModule({
-  declarations: [
-    TourOfHeroesComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -23,6 +21,10 @@ import { TourOfHeroesComponent } from './tourofheroes.component';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule
+  ],
+  declarations: [
+    TourOfHeroesComponent,
+    HeroDetailComponent
   ],
   providers: [],
   bootstrap: [
