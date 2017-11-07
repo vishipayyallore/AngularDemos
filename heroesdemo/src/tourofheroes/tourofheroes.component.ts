@@ -13,7 +13,7 @@ export class TourOfHeroesComponent {
   heroesList = HEROES;
   selectedHero: Hero;
 
-  onSelect(hero: Hero): void{
+  onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
 
