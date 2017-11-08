@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Hero } from './models/Hero';
-import { HEROES } from './models/Heroes';
+import { HEROES } from './data/Heroes';
 
 @Component({
   selector: 'app-heroesroot',
