@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { Hero } from './models/Hero';
 import { HEROES } from './data/Heroes';
+import { HeroService } from './services/hero.service';
 
 @Component({
   selector: 'app-heroesroot',

@@ -7,6 +7,7 @@ import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule,
 
 import { TourOfHeroesComponent } from './tourofheroes.component';
 import { HeroDetailComponent } from './herodetail/hero-detail.component';
+import { HeroService } from './services/hero.service';
 
 @NgModule({
   imports: [
@@ -26,7 +27,7 @@ import { HeroDetailComponent } from './herodetail/hero-detail.component';
     TourOfHeroesComponent,
     HeroDetailComponent
   ],
-  providers: [],
+  providers: [ HeroService ],
   bootstrap: [
     TourOfHeroesComponent
   ]
