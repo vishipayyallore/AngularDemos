@@ -14,6 +14,9 @@ export class TourOfHeroesComponent {
   heroesList = HEROES;
   selectedHero: Hero;
 
+  constructor(private heroService: HeroService) {
+  }
+
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
