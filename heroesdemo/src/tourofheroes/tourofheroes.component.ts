@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { Hero } from './models/Hero';
-import { HEROES } from './data/Heroes';
 import { HeroService } from './services/hero.service';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
