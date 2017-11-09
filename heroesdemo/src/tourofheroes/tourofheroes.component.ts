@@ -26,7 +26,8 @@ export class TourOfHeroesComponent implements OnInit {
   }
 
   getHeros(): void {
-    this.heroesList = this.heroService.getHeros();
+    this.heroService.getHeros()
+      .subscribe(heroes => this.heroesList = heroes);
   }
 
 }
