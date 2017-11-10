@@ -2,12 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule,
-  MatInputModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import {
+  MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule,
+  MatInputModule, MatToolbarModule, MatIconModule
+} from '@angular/material';
 
 import { TourOfHeroesComponent } from './tourofheroes.component';
 import { HeroDetailComponent } from './herodetail/hero-detail.component';
 import { HeroService } from './services/hero.service';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   imports: [
@@ -27,7 +30,7 @@ import { HeroService } from './services/hero.service';
     TourOfHeroesComponent,
     HeroDetailComponent
   ],
-  providers: [ HeroService ],
+  providers: [HeroService],
   bootstrap: [
     TourOfHeroesComponent
   ]
