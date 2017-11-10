@@ -29,7 +29,8 @@ import { MessageService } from './services/message.service';
   ],
   declarations: [
     TourOfHeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
   providers: [HeroService, MessageService],
   bootstrap: [
