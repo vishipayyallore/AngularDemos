@@ -11,7 +11,7 @@ export class MessageService {
   }
 
   clear(): void {
-    // this.messages.length = 0;
+     this.messages.length = 0;
   }
 
 }

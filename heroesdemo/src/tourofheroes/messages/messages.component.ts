@@ -9,7 +9,9 @@ import { MessageService } from '../services/message.service';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor(public messageService: MessageService) { }
+  constructor(public messageService: MessageService) {
+    messageService.add('Message Service got injected!');
+  }
 
   ngOnInit() {
   }
