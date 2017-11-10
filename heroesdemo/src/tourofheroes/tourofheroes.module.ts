@@ -11,6 +11,7 @@ import { TourOfHeroesComponent } from './tourofheroes.component';
 import { HeroDetailComponent } from './herodetail/hero-detail.component';
 import { HeroService } from './services/hero.service';
 import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './services/message.service';
 
 @NgModule({
   imports: [
@@ -30,7 +31,7 @@ import { MessagesComponent } from './messages/messages.component';
     TourOfHeroesComponent,
     HeroDetailComponent
   ],
-  providers: [HeroService],
+  providers: [HeroService, MessageService],
   bootstrap: [
     TourOfHeroesComponent
   ]
