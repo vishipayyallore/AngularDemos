@@ -7,7 +7,7 @@ import {
   MatInputModule, MatToolbarModule, MatIconModule
 } from '@angular/material';
 
-import { TourOfHeroesComponent } from './tourofheroes.component';
+import { TourOfHeroesComponent } from './heroeslist/tourofheroes.component';
 import { HeroDetailComponent } from './herodetail/hero-detail.component';
 import { HeroService } from './services/hero.service';
 import { MessagesComponent } from './messages/messages.component';
