@@ -30,8 +30,8 @@ export class TourOfHeroesComponent implements OnInit {
     this.heroService.getHeros()
       .subscribe((heroes) => {
         this.heroesList = heroes;
-        if(this.heroesList){
-          this.selectedHero = this.heroesList[0];
+        if (this.heroesList) {
+          this.onSelect(this.heroesList[0]);
         }
       });
   }
