@@ -1,11 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
+
+import { TourOfHeroesComponent } from './heroeslist/tourofheroes.component';
+import { Routes } from '@angular/router/src/config';
+
+const routes: Routes = [
+    { path: 'heros', component: TourOfHeroesComponent }
+];
 
 @NgModule({
-    imports: [
-        CommonModule
+    exports: [
+        RouterModule
     ],
-    declarations: [
+    imports: [
+        RouterModule.forRoot(routes)
     ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
