@@ -14,6 +14,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './services/message.service';
 import { AppComponent } from './app.component';
 
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { AppComponent } from './app.component';
     MatCardModule,
     MatMenuModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
