@@ -12,6 +12,7 @@ import { HeroDetailComponent } from './herodetail/hero-detail.component';
 import { HeroService } from './services/hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './services/message.service';
+import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
@@ -28,13 +29,14 @@ import { MessageService } from './services/message.service';
     MatIconModule
   ],
   declarations: [
+    AppComponent,
     TourOfHeroesComponent,
     HeroDetailComponent,
     MessagesComponent
   ],
   providers: [HeroService, MessageService],
   bootstrap: [
-    TourOfHeroesComponent
+    AppComponent
   ]
 })
 export class TourOfHeroesModule { }
