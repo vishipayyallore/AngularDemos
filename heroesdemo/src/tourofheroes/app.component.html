@@ -1,11 +1,34 @@
-<h1>{{applicationTitle}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<mat-toolbar color="primary">
+  <h1>{{applicationTitle}}</h1>
+  <span class="example-spacer"></span>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon> Menu
+  </button>
+</mat-toolbar>
 
+<mat-menu #menu="matMenu">
+  <button mat-menu-item> Settings </button>
+  <button mat-menu-item> Contact </button>
+</mat-menu>
+
+<mat-card>
+  <app-messages></app-messages>
+
+</mat-card>
+<div>
+  <footer>
+    <mat-toolbar color="primary" class="md-scroll-shrink">
+      <div layout="row" layout-align="center center" flex>
+        &copy; 2017
+      </div>
+    </mat-toolbar>
+  </footer>
+</div>
 
 <!-- 
 Copyright 2017 Google Inc. All Rights Reserved.
