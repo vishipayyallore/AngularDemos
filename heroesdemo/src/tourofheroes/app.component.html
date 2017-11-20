@@ -15,39 +15,26 @@
   <button mat-menu-item> Settings </button>
   <button mat-menu-item> Contact </button>
 </mat-menu>
-<mat-sidenav style="position:fixed;" align="begin" mode="push" #sidenav>
-  Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br /> Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br /> Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br /> Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br /> Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />Side Nav
-  <br />
-</mat-sidenav>
 
-<mat-card>
-  <app-messages></app-messages>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="example-sidenav">
+    Jolly good!
+  </mat-sidenav>
 
-</mat-card>
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+    <mat-card>
+      <app-messages></app-messages>
+    </mat-card>
+
+  </div>
+
+</mat-sidenav-container>
+
+
+
 <div>
   <footer>
     <mat-toolbar color="primary" class="md-scroll-shrink" item-height="50Px">

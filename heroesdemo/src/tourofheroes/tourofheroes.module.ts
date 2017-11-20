@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule,
-  MatInputModule, MatToolbarModule, MatIconModule
+  MatInputModule, MatToolbarModule, MatIconModule, MatSidenavModule
 } from '@angular/material';
 
 import { TourOfHeroesComponent } from './heroeslist/tourofheroes.component';
@@ -29,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    AppRoutingModule
+    MatSidenavModule,
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
