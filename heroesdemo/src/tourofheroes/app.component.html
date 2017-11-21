@@ -4,14 +4,12 @@
       <mat-icon>add</mat-icon>
     </button>
     <div class="example-scrolling-content">
-      Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus,
-      fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam
-      nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna
-      aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor
-      vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at,
-      ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu
-      enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis,
-      tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet.
+      Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum
+      etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem,
+      dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor
+      vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin,
+      quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper,
+      urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet.
       Taciti dui, sapien consectetuer.
     </div>
   </mat-sidenav>
@@ -19,25 +17,49 @@
     <mat-icon>add</mat-icon>
   </button>
   <div class="example-scrolling-content">
-    Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce
-    vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id,
-    neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna.
-    Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat
-    cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui
-    sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu
-    erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh
-    ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien
-    consectetuer.
 
-    Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce
-    vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id,
-    neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna.
-    Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat
-    cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui
-    sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu
-    erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh
-    ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien
-    consectetuer.
-    
+    <mat-toolbar color="primary">
+      <h1>{{applicationTitle}}</h1>
+      <span class="example-spacer"></span>
+      <nav>
+        <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="/heroes">Heroes</a>
+      </nav>
+      <router-outlet></router-outlet>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon> Menu
+      </button>
+    </mat-toolbar>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item> Settings </button>
+      <button mat-menu-item> Contact </button>
+    </mat-menu>
+
+
+
+    <mat-card>
+      <app-messages></app-messages>
+    </mat-card>
+
+
+    <div>
+      <footer>
+        <mat-toolbar color="primary" class="md-scroll-shrink" item-height="50Px">
+          <div layout="row" layout-align="center center" flex>
+            &copy; 2017
+          </div>
+        </mat-toolbar>
+      </footer>
+    </div>
+
+    <!-- 
+      Copyright 2017 Google Inc. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license
+      -->
+
+
+
   </div>
 </mat-sidenav-container>
