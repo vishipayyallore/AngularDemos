@@ -1,13 +1,11 @@
 /* AppComponent's private CSS styles */
 
 .example-sidenav-fab-container {
-  width: 500px;
-  height: 300px;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .example-sidenav-fab-container mat-sidenav {
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .example-sidenav-fab-container .mat-sidenav-content,
