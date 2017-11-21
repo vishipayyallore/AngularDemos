@@ -1,0 +1,52 @@
+<mat-toolbar color="primary">
+  <h1>{{applicationTitle}}</h1>
+  <span class="example-spacer"></span>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon> Menu
+  </button>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item> Settings </button>
+  <button mat-menu-item> Contact </button>
+</mat-menu>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="example-sidenav">
+    Jolly good!
+  </mat-sidenav>
+
+  <div class="example-sidenav-content">
+    <mat-card>
+      <button type="button" mat-button (click)="sidenav.open()">
+        Open sidenav
+      </button>
+        <app-messages></app-messages>
+    </mat-card>
+
+  </div>
+
+</mat-sidenav-container>
+
+
+
+<div>
+  <footer>
+    <mat-toolbar color="primary" class="md-scroll-shrink" item-height="50Px">
+      <div layout="row" layout-align="center center" flex>
+        &copy; 2017
+      </div>
+    </mat-toolbar>
+  </footer>
+</div>
+
+<!-- 
+Copyright 2017 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
