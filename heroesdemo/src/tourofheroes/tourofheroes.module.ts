@@ -37,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     TourOfHeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   providers: [HeroService, MessageService],
   bootstrap: [
