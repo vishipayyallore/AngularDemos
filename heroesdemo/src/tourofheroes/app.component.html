@@ -34,7 +34,6 @@
     <mat-toolbar color="primary">
       <h1>{{applicationTitle}}</h1>
       <span class="example-spacer"></span>
-      <router-outlet></router-outlet>
       <button mat-button [matMenuTriggerFor]="menu">
         <mat-icon>menu</mat-icon> Menu
       </button>
@@ -46,7 +45,8 @@
     </mat-menu>
 
     <mat-card>
-      <app-heroesroot></app-heroesroot>
+      <router-outlet></router-outlet>
+      <!-- <app-heroesroot></app-heroesroot> -->
     </mat-card>
 
     <div>
