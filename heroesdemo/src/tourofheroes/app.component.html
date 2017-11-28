@@ -1,9 +1,13 @@
 <mat-toolbar color="primary">
   <h1>{{applicationTitle}}</h1>
+  <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
+    <mat-icon>add</mat-icon>
+  </button>
   <span class="example-spacer"></span>
   <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon> Menu
   </button>
+
 </mat-toolbar>
 
 <mat-menu #menu="matMenu">
@@ -40,13 +44,11 @@
       </div>
     </div>
   </mat-sidenav>
-  <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
-    <mat-icon>add</mat-icon>
-  </button>
   <div class="example-scrolling-content">
-
+  
     <mat-card>
-      <router-outlet></router-outlet>
+      <br>
+        <router-outlet></router-outlet>
       <!-- <app-heroesroot></app-heroesroot> -->
     </mat-card>
 
