@@ -1,3 +1,16 @@
+<mat-toolbar color="primary">
+  <h1>{{applicationTitle}}</h1>
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon> Menu
+  </button>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item> Settings </button>
+  <button mat-menu-item> Contact </button>
+</mat-menu>
+
 <mat-sidenav-container class="example-sidenav-fab-container">
   <mat-sidenav #sidenav mode="side" opened="true">
     <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
@@ -31,41 +44,27 @@
     <mat-icon>add</mat-icon>
   </button>
   <div class="example-scrolling-content">
-    <mat-toolbar color="primary">
-      <h1>{{applicationTitle}}</h1>
-      <span class="example-spacer"></span>
-      <button mat-button [matMenuTriggerFor]="menu">
-        <mat-icon>menu</mat-icon> Menu
-      </button>
-    </mat-toolbar>
-
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item> Settings </button>
-      <button mat-menu-item> Contact </button>
-    </mat-menu>
 
     <mat-card>
       <router-outlet></router-outlet>
       <!-- <app-heroesroot></app-heroesroot> -->
     </mat-card>
 
-    <div>
-      <footer>
-        <mat-toolbar color="primary" class="md-scroll-shrink" item-height="50Px">
-          <div layout="row" layout-align="center center" flex>
-            &copy; 2017
-          </div>
-        </mat-toolbar>
-      </footer>
-    </div>
-
-    <!-- 
-      Copyright 2017 Google Inc. All Rights Reserved.
-      Use of this source code is governed by an MIT-style license that
-      can be found in the LICENSE file at http://angular.io/license
-      -->
-
-
-
   </div>
 </mat-sidenav-container>
+
+<div>
+  <footer>
+    <mat-toolbar color="primary" class="md-scroll-shrink" item-height="50Px">
+      <div layout="row" layout-align="center center" flex>
+        &copy; 2017
+      </div>
+    </mat-toolbar>
+  </footer>
+</div>
+
+<!-- 
+  Copyright 2017 Google Inc. All Rights Reserved.
+  Use of this source code is governed by an MIT-style license that
+  can be found in the LICENSE file at http://angular.io/license
+  -->
