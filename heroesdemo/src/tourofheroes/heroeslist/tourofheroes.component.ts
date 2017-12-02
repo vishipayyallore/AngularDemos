@@ -22,10 +22,6 @@ export class TourOfHeroesComponent implements OnInit {
   }
 
   onSelect(hero: Hero): void {
-    const number1 = 10;
-    const number2 = 10;
-    const output = `Number1: ${number1} Number2: ${number2}`;
-
     this.selectedHero = hero;
     this.messageService.add('Selected Hero: ' + hero.name);
   }
