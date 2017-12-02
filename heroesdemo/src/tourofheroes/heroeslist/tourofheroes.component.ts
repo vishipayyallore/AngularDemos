@@ -21,18 +21,10 @@ export class TourOfHeroesComponent implements OnInit {
     this.getHeros();
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add('Selected Hero: ' + hero.name);
-  }
-
   getHeros(): void {
     this.heroService.getHeros()
       .subscribe((heroes) => {
         this.heroesList = heroes;
-        if (this.heroesList) {
-          this.onSelect(this.heroesList[0]);
-        }
       });
   }
 
