@@ -12,7 +12,6 @@ import { MessageService } from '../services/message.service';
 export class TourOfHeroesComponent implements OnInit {
   title = 'Tour of Heroes';
   heroesList: Hero[] = null;
-  selectedHero: Hero;
 
   constructor(private heroService: HeroService, private messageService: MessageService) {
   }
