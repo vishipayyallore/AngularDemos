@@ -1,14 +1,14 @@
 <div *ngIf="hero">
-    <h2>{{hero.name}} details!</h2>
-    <div>
-      <mat-form-field>
-        <input matInput="text" [(ngModel)]="hero.id" disabled placeholder="Hero Id">
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput="text" [(ngModel)]="hero.name" placeholder="Hero Name">
-      </mat-form-field>
-    </div>
-
+  <h2>{{hero.name}} details!</h2>
+  <div>
+    <mat-form-field>
+      <input matInput="text" [(ngModel)]="hero.id" disabled placeholder="Hero Id">
+    </mat-form-field>
   </div>
+  <div>
+    <mat-form-field>
+      <input matInput="text" [(ngModel)]="hero.name" placeholder="Hero Name">
+    </mat-form-field>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
