@@ -59,6 +59,11 @@ nav a.active {
   color: #039be5;
 }
 
+footer {
+  background: #efefef;
+  padding: 15px;
+}
+
 
 /*
   Copyright 2017 Google Inc. All Rights Reserved.
