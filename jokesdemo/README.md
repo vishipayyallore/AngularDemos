@@ -1,4 +1,4 @@
-# Jokesdemo
+# Jokesdemo [Learning Angular 5 from https://codecraft.tv/courses/angular/]
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
