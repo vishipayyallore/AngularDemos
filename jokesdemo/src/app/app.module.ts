@@ -7,11 +7,12 @@ import {
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-
+import { JokeComponent } from './jokes/joke.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JokeComponent
   ],
   imports: [
     BrowserModule,
