@@ -1,8 +1,60 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<mat-toolbar color="primary">
+  <h4 class="headline">{{applicationTitle}}</h4>
+  <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()" title="Side Navigation Bar Toggle!">
+    <mat-icon>view_list</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon> Menu
+  </button>
 
-  <button mat-raised-button color="primary">Hello World!</button>
-</div>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item> Settings </button>
+  <button mat-menu-item> Contact </button>
+</mat-menu>
+
+<mat-sidenav-container class="example-sidenav-fab-container">
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <div class="example-scrolling-content">
+      <div>
+        <nav>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <button mat-raised-button color="primary" routerLink="/dashboard">Dashboard</button>
+              </td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <button mat-raised-button color="primary" routerLink="/heroes">Heroes</button>
+              </td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </nav>
+      </div>
+    </div>
+  </mat-sidenav>
+  <div class="example-scrolling-content">
+
+    <mat-card>
+      <div style="text-align:center">
+        <h1>
+          Welcome to {{ title }}!
+        </h1>
+
+        <button mat-raised-button color="primary">Hello World!</button>
+      </div>
+    </mat-card>
+
+  </div>
+</mat-sidenav-container>
+<footer>
+  <h4>&copy; 2017</h4>
+</footer>
