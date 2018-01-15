@@ -8,11 +8,13 @@ import {
 
 import { AppComponent } from './app.component';
 import { JokeComponent } from './jokes/joke.component';
+import { FooterComponent } from './reusables/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JokeComponent
+    JokeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

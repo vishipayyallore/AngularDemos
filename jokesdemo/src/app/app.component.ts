@@ -7,5 +7,5 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Jokes Demo Application';
+  applicationTitle = 'Jokes Demo Application';
 }
