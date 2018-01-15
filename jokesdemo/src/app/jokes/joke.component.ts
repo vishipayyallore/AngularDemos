@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
     templateUrl: './joke.component.html'
 })
 export class JokeComponent {
-    message = 'Joke Component';
+    message: string;
+    setup: string;
+    punchLine: string;
+
+    constructor() {
+        this.message = 'Joke Component';
+
+        this.setup = 'This is the Joke Component! Got initialized from constructor.';
+        this.punchLine = 'This is Punch Line.';
+    }
+
 }
