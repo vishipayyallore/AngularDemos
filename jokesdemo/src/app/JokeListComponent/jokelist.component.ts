@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-joke-list',
-    templateUrl: './jokelist.component'
+    templateUrl: './jokelist.component.html',
+    styleUrls: ['./jokelist.component.css']
 })
 export class JokeListComponent {
-    jokes: Object[];
+    jokes: Array<Object>;
 
     constructor() {
         this.jokes = [

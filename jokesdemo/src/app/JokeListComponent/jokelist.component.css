@@ -1,0 +1,7 @@
+.example-card {
+  width: 400px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-color: rgb(11, 14, 230);
+  border-style: solid;
+}
