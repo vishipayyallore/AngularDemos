@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatSlideToggleChange} from '@angular/material';
 
 @Component({
     selector: 'app-joke-list',
@@ -31,5 +32,9 @@ export class JokeListComponent {
         ];
 
     }
+
+  public showContent(event: MatSlideToggleChange, joke: any) {
+    joke.hide = event.checked;
+  }
 
 }
