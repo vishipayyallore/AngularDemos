@@ -1,11 +1,15 @@
 <mat-card class="example-card" *ngFor="let joke of jokes">
   <mat-card-header>
-    <mat-card-title><b>{{joke.setup}}</b></mat-card-title>
+    <mat-card-title>
+      <b>{{joke.setup}}</b>
+    </mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <h5>{{joke.punchline}}</h5>
-    <p>
-      {{joke.storyline}}
-    </p>
+    <div [hidden]="joke.hide">
+      <h5>{{joke.punchline}}</h5>
+      <p>
+        {{joke.storyline}}
+      </p>
+    </div>
   </mat-card-content>
 </mat-card>
