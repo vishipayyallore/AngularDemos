@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
     MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule,
-    MatInputModule, MatToolbarModule, MatIconModule, MatSidenavModule
+    MatInputModule, MatToolbarModule, MatIconModule, MatSidenavModule,
+    MatSliderModule, MatSlideToggle, MatSlider, MatSlideToggleBase
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -30,6 +31,8 @@ import { JokeListComponent } from './JokeListComponent/jokelist.component';
         MatToolbarModule,
         MatIconModule,
         MatSidenavModule,
+        MatSliderModule,
+        MatSlideToggleBase
     ],
     providers: [],
     bootstrap: [AppComponent]
