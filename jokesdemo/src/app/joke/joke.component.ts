@@ -12,7 +12,7 @@ export class Joke {
         this.hide = true;
     }
 
-    toggle() {
+    public toggle(): void {
         this.hide = !this.hide;
     }
 }

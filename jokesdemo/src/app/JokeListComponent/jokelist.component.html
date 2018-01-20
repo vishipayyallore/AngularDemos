@@ -5,7 +5,7 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <mat-slide-toggle class="primary" [checked]="joke.hide" (change)="showContent($event, joke)">Show Content!</mat-slide-toggle>
+    <mat-slide-toggle class="primary" [checked]="joke.hide" (change)="joke.toggle()">Show Content!</mat-slide-toggle>
     <div [hidden]="!joke.hide">
       <h5>{{joke.punchline}}</h5>
       <p>
