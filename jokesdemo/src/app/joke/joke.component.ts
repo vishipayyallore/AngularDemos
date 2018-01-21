@@ -1,5 +1,11 @@
+import { Component } from '@angular/core';
 
-export class Joke {
+
+@Component({
+    selector: 'app-joke',
+    templateUrl: './joke.component.html'
+})
+export class JokeComponent {
     setup: string;
     punchline: string;
     storyline: string;
