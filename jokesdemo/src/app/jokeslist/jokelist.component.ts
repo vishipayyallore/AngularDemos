@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { MatSlideToggleChange } from '@angular/material';
-import { JokeComponent } from '../joke/joke.component';
 import { JokeData } from '../models/joke.data';
 
 @Component({

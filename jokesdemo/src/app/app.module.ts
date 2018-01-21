@@ -10,7 +10,7 @@ import {
 import { AppComponent } from './app.component';
 import { JokeComponent } from './joke/joke.component';
 import { FooterComponent } from './reusables/footer/footer.component';
-import { JokeListComponent } from './JokeListComponent/jokelist.component';
+import { JokeListComponent } from './jokeslist/jokelist.component';
 
 @NgModule({
   declarations: [
