@@ -1,24 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { JokeData } from '../models/joke.data';
 
 
 @Component({
-    selector: 'app-joke',
+    selector: 'app-jokeitem',
     templateUrl: './joke.component.html'
 })
 export class JokeComponent {
-    setup: string;
-    punchline: string;
-    storyline: string;
-    hide: boolean;
-
-    constructor(setup: string, punchline: string, storyline: string) {
-        this.setup = setup;
-        this.punchline = punchline;
-        this.storyline = storyline;
-        this.hide = true;
-    }
-
-    public toggle(): void {
-        this.hide = !this.hide;
-    }
+    @Input('joke')
+    public joke: JokeData;
 }
