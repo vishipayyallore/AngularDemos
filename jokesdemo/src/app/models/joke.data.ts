@@ -8,7 +8,7 @@ export class JokeData {
         this.setup = setup;
         this.punchline = punchline;
         this.storyline = storyline;
-        this.hide = true;
+        this.hide = false;
     }
 
     public toggle(): void {
