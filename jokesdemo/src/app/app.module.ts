@@ -8,9 +8,9 @@ import {
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { JokeComponent } from './joke/joke.component';
 import { FooterComponent } from './reusables/footer/footer.component';
-import { JokeListComponent } from './jokeslist/jokelist.component';
+import { JokeListComponent } from './jokes/jokeslist/jokelist.component';
+import { JokeComponent } from './jokes/joke/joke.component';
 
 @NgModule({
   declarations: [

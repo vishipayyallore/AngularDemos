@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { JokeData } from '../models/joke.data';
+import { JokeData } from '../../models/joke.data';
 
 @Component({
     selector: 'app-joke-list',
