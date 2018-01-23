@@ -1,9 +1,9 @@
-import { Component } from '@angular/core/src/metadata/directives';
-
-
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-jokeform'
+    selector: 'app-jokeform',
+    templateUrl: './jokeform.component.html',
+    styleUrls: ['./jokeform.component.css']
 })
 export class JokeFormComponent {
 

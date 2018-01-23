@@ -1,0 +1,16 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 40%;
+  }
+
+  .example-card {
+    width: 400px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-color: rgb(236, 94, 12);
+    border-style: solid;
+  }

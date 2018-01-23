@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './reusables/footer/footer.component';
 import { JokeListComponent } from './jokes/jokeslist/jokelist.component';
 import { JokeComponent } from './jokes/joke/joke.component';
+import { JokeFormComponent } from './jokes/jokeform/jokeform.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { JokeComponent } from './jokes/joke/joke.component';
     FooterComponent,
     JokeComponent,
     JokeListComponent,
+    JokeFormComponent
   ],
   imports: [
     BrowserModule,
