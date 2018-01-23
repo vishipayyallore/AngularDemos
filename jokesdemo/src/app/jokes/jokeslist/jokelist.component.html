@@ -1,2 +1,8 @@
-<app-jokeform></app-jokeform>
-<app-jokeitem *ngFor="let joke of jokes" [joke]="joke"></app-jokeitem>
+<section class="container">
+  <div class="one">
+    <app-jokeform></app-jokeform>
+  </div>
+  <div class="two">
+    <app-jokeitem *ngFor="let joke of jokes" [joke]="joke"></app-jokeitem>
+  </div>
+</section>

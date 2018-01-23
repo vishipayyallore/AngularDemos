@@ -4,7 +4,7 @@
   }
   
   .example-container > * {
-    width: 40%;
+    width: 100%;
   }
 
   .example-card {
