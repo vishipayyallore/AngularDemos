@@ -21,4 +21,10 @@ export class JokeListComponent {
         this.jokes.unshift(joke);
     }
 
+    deleteJoke(joke) {
+        const index = this.jokes.indexOf(joke);
+        if (index !== -1) {
+            this.jokes.splice(index, 1);
+        }
+    }
 }
