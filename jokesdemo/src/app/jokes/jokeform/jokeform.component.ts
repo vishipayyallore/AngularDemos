@@ -9,12 +9,8 @@ import { JokeData } from '../../models/joke.data';
 export class JokeFormComponent {
     @Output() jokeCreated = new EventEmitter<JokeData>();
 
-    createJoke() {
-        this.jokeCreated.emit(new JokeData(
-            'setup',
-            'punch line',
-            'story line'
-        ));
+    createJoke(setup: string, punchline: string, storyline: string) {
+        this.jokeCreated.emit(new JokeData(setup, punchline, storyline));
     }
 }
 
