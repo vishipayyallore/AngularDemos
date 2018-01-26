@@ -4,11 +4,11 @@ export class JokeData {
     storyline: string;
     hide: boolean;
 
-    constructor(setup: string, punchline: string, storyline: string) {
+    constructor(setup: string, punchline: string, storyline: string, hide: boolean = false) {
         this.setup = setup;
         this.punchline = punchline;
         this.storyline = storyline;
-        this.hide = false;
+        this.hide = hide;
     }
 
     public toggle(): void {
