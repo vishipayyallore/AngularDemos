@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { JokeData } from '../../models/joke.data';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
     selector: 'app-joke-list',
@@ -9,7 +10,7 @@ import { JokeData } from '../../models/joke.data';
 export class JokeListComponent {
     jokes: Array<JokeData>;
 
-    constructor() {
+    constructor(public snackBar: MatSnackBar) {
         this.jokes = [
             new JokeData('Joke 1', 'Punch for Joke 1', 'What did the cheese say when it looked in the mirror?'),
             new JokeData('Joke 2', 'Punch for Joke 2', 'What kind of cheese do you use to disguise a small horse?'),
@@ -25,6 +26,9 @@ export class JokeListComponent {
         const index = this.jokes.indexOf(joke);
         if (index !== -1) {
             this.jokes.splice(index, 1);
+            this.snackBar.open('Joke Deleted!', 'Close', {
+                duration: 2000,
+              });
         }
     }
 }
