@@ -17,4 +17,8 @@ export class JokeListComponent {
         ];
     }
 
+    addJoke(joke) {
+        this.jokes.unshift(joke);
+    }
+
 }
