@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { JokeData } from '../../models/joke.data';
 
 @Component({
     selector: 'app-jokeform',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
     styleUrls: ['./jokeform.component.css']
 })
 export class JokeFormComponent {
+    @Output() jokeCreated = new EventEmitter<JokeData>();
 
+    createJoke() {
+        this.jokeCreated.emit(new JokeData(
+            'setup',
+            'punch line',
+            'story line'
+        ));
+    }
 }
+
