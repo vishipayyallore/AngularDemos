@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { JokeData } from '../../models/joke.data';
-import { MatSlideToggle } from '@angular/material';
+import { MatSlideToggle, MatSnackBar } from '@angular/material';
 
 @Component({
     selector: 'app-jokeform',
@@ -14,8 +14,16 @@ export class JokeFormComponent {
     @ViewChild('storyline') storyline: ElementRef;
     @ViewChild('hide') hide: MatSlideToggle;
 
-    createJoke(setup: string, punchline: string, storyline: string, hide: boolean) {
-        this.jokeCreated.emit(new JokeData(setup, punchline, storyline, hide));
+    constructor(public snackBar: MatSnackBar) {
+    }
+
+    createJoke() {
+        this.jokeCreated.emit(new JokeData(this.setup.nativeElement.value,
+            this.punchline.nativeElement.value, this.storyline.nativeElement.value, this.hide.checked));
+        this.snackBar.open('Joke Created', 'Close', {
+            duration: 2000,
+          });
+        this.clearForm();
     }
 
     clearForm() {

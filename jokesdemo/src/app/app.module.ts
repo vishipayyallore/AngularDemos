@@ -4,7 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule,
   MatInputModule, MatToolbarModule, MatIconModule, MatSidenavModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ import { JokeFormComponent } from './jokes/jokeform/jokeform.component';
     MatIconModule,
     MatSidenavModule,
     MatSlideToggleModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
