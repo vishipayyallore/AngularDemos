@@ -8,7 +8,7 @@
   </mat-card-header>
   <mat-card-content>
     <div [hidden]="!joke.hide">
-      <h5>{{joke.punchline}}</h5>
+      <ng-content></ng-content>
       <p>
         {{joke.storyline}}
       </p>
