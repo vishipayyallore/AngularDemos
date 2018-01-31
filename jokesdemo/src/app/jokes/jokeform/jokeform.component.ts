@@ -7,7 +7,10 @@ import { MatSlideToggle, MatSnackBar } from '@angular/material';
     templateUrl: './jokeform.component.html',
     styleUrls: ['./jokeform.component.css'],
     encapsulation: ViewEncapsulation.Emulated,
-    /* ViewEncapsulation.Native (We will loose global styles) */
+    /*
+    By default, the renderer uses ViewEncapsulation.Emulated
+    ViewEncapsulation.Native (We will loose global styles) 
+    */
 })
 export class JokeFormComponent {
     @Output() jokeCreated = new EventEmitter<JokeData>();
