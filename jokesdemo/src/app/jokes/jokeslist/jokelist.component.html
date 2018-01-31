@@ -4,7 +4,8 @@
   </div>
   <div class="two">
     <app-jokeitem *ngFor="let joke of jokes" [joke]="joke" (jokeDeleted)="deleteJoke($event)">
-      <h4>{{joke.punchline}}</h4>
+      <h4 class="punchline">{{joke.punchline}}</h4>
+      <p class="storyline"> {{joke.storyline}} </p>
     </app-jokeitem>
   </div>
 </section>
