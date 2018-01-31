@@ -1,11 +1,13 @@
-import { Component, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { Component, Output, EventEmitter, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { JokeData } from '../../models/joke.data';
 import { MatSlideToggle, MatSnackBar } from '@angular/material';
 
 @Component({
     selector: 'app-jokeform',
     templateUrl: './jokeform.component.html',
-    styleUrls: ['./jokeform.component.css']
+    styleUrls: ['./jokeform.component.css'],
+    encapsulation: ViewEncapsulation.Emulated,
+    /* ViewEncapsulation.Native (We will loose global styles) */
 })
 export class JokeFormComponent {
     @Output() jokeCreated = new EventEmitter<JokeData>();
@@ -22,7 +24,7 @@ export class JokeFormComponent {
             this.punchline.nativeElement.value, this.storyline.nativeElement.value, this.hide.checked));
         this.snackBar.open('Joke Created', 'Close', {
             duration: 2000,
-          });
+        });
         this.clearForm();
     }
 
