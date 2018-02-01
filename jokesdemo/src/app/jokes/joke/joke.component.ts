@@ -56,9 +56,13 @@ export class JokeComponent {
     ngAfterViewChecked() {
         // Called after every check of the component's view. Applies to components only.
         // Add 'implements AfterViewChecked' to the class.
-        console.log("ngAfterViewChecked");
+        console.log('ngAfterViewChecked');
     }
 
+    ngOnDestroy() {
+        // Called once, before the instance is destroyed.
+        // Add 'implements OnDestroy' to the class.
 
+    }
 
 }
