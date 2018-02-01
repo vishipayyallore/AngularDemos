@@ -1,13 +1,17 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { JokeData } from '../../models/joke.data';
-
+import {
+    OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, 
+    AfterViewChecked, OnDestroy, SimpleChanges
+} from '@angular/core';
 
 @Component({
     selector: 'app-jokeitem',
     templateUrl: './joke.component.html',
     styleUrls: ['./joke.component.css']
 })
-export class JokeComponent {
+export class JokeComponent implements OnChanges, OnInit, DoCheck, AfterContentInit,
+    AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
     @Input('joke')
     public joke: JokeData;
     @Output()
@@ -21,8 +25,14 @@ export class JokeComponent {
         console.log(`new - data is ${this.joke}`);
     }
 
-    ngOnChanges() {
+    ngOnChanges(changes: SimpleChanges) {
         console.log(`ngOnChanges - data is ${this.joke}`);
+
+        for (let key in changes) {
+            console.log(`${key} changed.
+    Current: ${changes[key].currentValue}.
+    Previous: ${changes[key].previousValue}`);
+        }
     }
 
     ngOnInit() {
@@ -66,6 +76,8 @@ export class JokeComponent {
     }
 
 }
+
+
 
 /*
 new - data is undefined
