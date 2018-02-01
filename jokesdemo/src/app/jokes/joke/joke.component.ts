@@ -66,3 +66,14 @@ export class JokeComponent {
     }
 
 }
+
+/*
+new - data is undefined
+ngOnChanges - data is [object Object]
+ngOnInit  - data is [object Object]
+ngDoCheck
+ngAfterContentInit
+ngAfterContentChecked
+ngAfterViewInit
+ngAfterViewChecked
+*/

@@ -1,5 +1,5 @@
 <section class="container">
-  <div class="one">
+  <!-- <div class="one">
     <app-jokeform (jokeCreated)="addJoke($event)"></app-jokeform>
   </div>
   <div class="two">
@@ -7,5 +7,11 @@
       <h4 class="punchline">{{joke.punchline}}</h4>
       <p class="storyline"> {{joke.storyline}} </p>
     </app-jokeitem>
-  </div>
+  </div> -->
+  <app-jokeitem *ngFor="let joke of jokes" [joke]="joke" (jokeDeleted)="deleteJoke($event)">
+    <!-- <h4 class="punchline">{{joke.punchline}}</h4>
+    <p class="storyline"> {{joke.storyline}} </p> -->
+  </app-jokeitem>
+  <button mat-raised-button color="primary" (click)="addJoke()">Add Joke</button>
+  <button mat-raised-button color="primary" (click)="deleteJoke()">Clear Jokes</button>
 </section>
