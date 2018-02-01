@@ -17,4 +17,48 @@ export class JokeComponent {
         this.jokeDeleted.emit(joke);
     }
 
+    constructor() {
+        console.log(`new - data is ${this.joke}`);
+    }
+
+    ngOnChanges() {
+        console.log(`ngOnChanges - data is ${this.joke}`);
+    }
+
+    ngOnInit() {
+        // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+        // Add 'implements OnInit' to the class.
+        console.log(`ngOnInit  - data is ${this.joke}`);
+    }
+
+    ngDoCheck() {
+        console.log('ngDoCheck');
+    }
+
+    ngAfterContentInit() {
+        // Called after ngOnInit when the component's or directive's content has been initialized.
+        // Add 'implements AfterContentInit' to the class.
+        console.log('ngAfterContentInit');
+    }
+
+    ngAfterContentChecked() {
+        // Called after every check of the component's or directive's content.
+        // Add 'implements AfterContentChecked' to the class.
+        console.log('ngAfterContentChecked');
+    }
+
+    ngAfterViewInit() {
+        // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+        // Add 'implements AfterViewInit' to the class.
+        console.log('ngAfterViewInit');
+    }
+
+    ngAfterViewChecked() {
+        // Called after every check of the component's view. Applies to components only.
+        // Add 'implements AfterViewChecked' to the class.
+        console.log("ngAfterViewChecked");
+    }
+
+
+
 }
