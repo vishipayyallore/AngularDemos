@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
 
 import { MatSnackBar } from '@angular/material';
 
@@ -14,6 +14,8 @@ import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 export class JokeListComponent implements AfterViewInit {
     @ViewChild(JokeComponent)
     jokeViewChild: JokeComponent;
+    @ViewChildren(JokeComponent)
+    jokeViewChildern: QueryList<JokeComponent>;
     jokes: Array<JokeData> = [];
 
     constructor(public snackBar: MatSnackBar) {
@@ -42,5 +44,8 @@ export class JokeListComponent implements AfterViewInit {
 
     ngAfterViewInit(): void {
         console.log(`ngAfterViewInit - jokeViewChild is ${this.jokeViewChild}`);
+
+        const allJokeViewChilderns = this.jokeViewChildern.toArray();
+        console.log(allJokeViewChilderns);
     }
 }
