@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
-import { JokeData } from '../../models/joke.data';
+import { Component, ViewChild } from '@angular/core';
+
 import { MatSnackBar } from '@angular/material';
+
+import { JokeData } from '../../models/joke.data';
+import { JokeComponent } from '../joke/joke.component';
+import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
     selector: 'app-joke-list',
     templateUrl: './jokelist.component.html',
     styleUrls: ['./jokelist.component.css']
 })
-export class JokeListComponent {
+export class JokeListComponent implements AfterViewInit {
+    @ViewChild(JokeComponent)
+    jokeViewChild: JokeComponent;
     jokes: Array<JokeData> = [];
 
     constructor(public snackBar: MatSnackBar) {
+        console.log(`new - jokeViewChild is ${this.jokeViewChild}`);
+
         this.jokes = [
             new JokeData('Joke 1', 'Punch for Joke 1', 'What did the cheese say when it looked in the mirror?'),
             new JokeData('Joke 2', 'Punch for Joke 2', 'What kind of cheese do you use to disguise a small horse?'),
@@ -30,5 +38,9 @@ export class JokeListComponent {
                 duration: 2000,
             });
         }
+    }
+
+    ngAfterViewInit(): void {
+        console.log(`ngAfterViewInit - jokeViewChild is ${this.jokeViewChild}`);
     }
 }
