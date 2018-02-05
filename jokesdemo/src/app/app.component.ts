@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JokeData } from './models/joke.data';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   applicationTitle = 'Jokes Demo Application';
+  joke: JokeData = new JokeData('Setup', 'Punch Line', 'The Story Line', true);
+
 }
+

@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { JokeData } from '../../models/joke.data';
 import {
-    OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, 
+    OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit,
     AfterViewChecked, OnDestroy, SimpleChanges
 } from '@angular/core';
 
@@ -10,8 +10,7 @@ import {
     templateUrl: './joke.component.html',
     styleUrls: ['./joke.component.css']
 })
-export class JokeComponent implements OnChanges, OnInit, DoCheck, AfterContentInit,
-    AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class JokeComponent {
     @Input('joke')
     public joke: JokeData;
     @Output()
@@ -20,6 +19,21 @@ export class JokeComponent implements OnChanges, OnInit, DoCheck, AfterContentIn
     onJokeDeleted(joke: JokeData) {
         this.jokeDeleted.emit(joke);
     }
+
+
+}
+
+
+
+/*
+new - data is undefined
+ngOnChanges - data is [object Object]
+ngOnInit  - data is [object Object]
+ngDoCheck
+ngAfterContentInit
+ngAfterContentChecked
+ngAfterViewInit
+ngAfterViewChecked
 
     constructor() {
         console.log(`new - data is ${this.joke}`);
@@ -75,17 +89,4 @@ export class JokeComponent implements OnChanges, OnInit, DoCheck, AfterContentIn
 
     }
 
-}
-
-
-
-/*
-new - data is undefined
-ngOnChanges - data is [object Object]
-ngOnInit  - data is [object Object]
-ngDoCheck
-ngAfterContentInit
-ngAfterContentChecked
-ngAfterViewInit
-ngAfterViewChecked
 */

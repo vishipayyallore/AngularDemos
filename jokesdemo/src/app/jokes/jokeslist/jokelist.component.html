@@ -3,9 +3,12 @@
     <app-jokeform (jokeCreated)="addJoke($event)"></app-jokeform>
   </div>
   <div class="two">
+      <h4>View Jokes</h4>
     <app-jokeitem *ngFor="let joke of jokes" [joke]="joke" (jokeDeleted)="deleteJoke($event)">
       <h4 class="punchline">{{joke.punchline}}</h4>
       <p class="storyline"> {{joke.storyline}} </p>
     </app-jokeitem>
+    <h4>Content Jokes</h4>
+    <ng-content></ng-content>
   </div>
 </section>

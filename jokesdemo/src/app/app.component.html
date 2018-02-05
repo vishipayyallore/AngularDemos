@@ -41,7 +41,13 @@
     </div>
   </mat-sidenav>
   <div class="example-scrolling-content">
-    <app-joke-list></app-joke-list>
+    <app-joke-list>
+      <app-jokeitem [joke]="joke">
+        <span class="setup">{{ joke.setup }}</span>
+        <h4 class="punchline">{{joke.punchline}}</h4>
+        <p class="storyline"> {{joke.storyline}} </p>
+      </app-jokeitem>
+    </app-joke-list>
   </div>
 </mat-sidenav-container>
 <app-footer></app-footer>
