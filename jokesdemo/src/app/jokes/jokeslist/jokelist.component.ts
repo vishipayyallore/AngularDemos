@@ -1,4 +1,4 @@
-import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { Component, ViewChild, ViewChildren, QueryList, ElementRef } from '@angular/core';
 
 import { MatSnackBar } from '@angular/material';
 
@@ -14,6 +14,8 @@ import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 export class JokeListComponent implements AfterViewInit {
     @ViewChild(JokeComponent)
     jokeViewChild: JokeComponent;
+    @ViewChild('header')
+    headerElement: ElementRef;
     @ViewChildren(JokeComponent)
     jokeViewChildern: QueryList<JokeComponent>;
     jokes: Array<JokeData> = [];
@@ -47,5 +49,9 @@ export class JokeListComponent implements AfterViewInit {
 
         const allJokeViewChilderns = this.jokeViewChildern.toArray();
         console.log(allJokeViewChilderns);
+
+        console.log(`ngAfterViewInit - headerEl is ${this.headerElement}`);
+        //noinspection TypeScriptUnresolvedVariable
+        this.headerElement.nativeElement.textContent = 'Best Joke!!!';
     }
 }
