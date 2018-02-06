@@ -1,23 +1,27 @@
-import { Component, ViewChild, ViewChildren, QueryList, ElementRef } from '@angular/core';
+import {
+    Component, ViewChild, ViewChildren, QueryList, ElementRef, ContentChild, ContentChildren
+} from '@angular/core';
 
 import { MatSnackBar } from '@angular/material';
 
 import { JokeData } from '../../models/joke.data';
 import { JokeComponent } from '../joke/joke.component';
-import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { AfterViewInit, AfterContentInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
     selector: 'app-joke-list',
     templateUrl: './jokelist.component.html',
     styleUrls: ['./jokelist.component.css']
 })
-export class JokeListComponent implements AfterViewInit {
+export class JokeListComponent implements AfterViewInit, AfterContentInit {
     @ViewChild(JokeComponent)
     jokeViewChild: JokeComponent;
     @ViewChild('header')
     headerElement: ElementRef;
     @ViewChildren(JokeComponent)
     jokeViewChildern: QueryList<JokeComponent>;
+    @ContentChild(JokeComponent)
+    jokeContentChild: JokeComponent;
     jokes: Array<JokeData> = [];
 
     constructor(public snackBar: MatSnackBar) {
@@ -54,4 +58,9 @@ export class JokeListComponent implements AfterViewInit {
         //noinspection TypeScriptUnresolvedVariable
         this.headerElement.nativeElement.textContent = 'Best Joke!!!';
     }
+
+    ngAfterContentInit() {
+        console.log(`ngAfterContentInit - jokeContentChild is ${this.jokeContentChild}`);
+    }
+
 }
