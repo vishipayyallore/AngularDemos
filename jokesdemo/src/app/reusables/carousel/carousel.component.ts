@@ -1,5 +1,6 @@
 import { Component, ContentChildren, QueryList, Input } from '@angular/core';
 import { AfterContentInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { CarouselItemComponent } from './carousel-item/carouselItem.component';
 
 
 @Component({
@@ -8,12 +9,21 @@ import { AfterContentInit } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 export class CarouselComponent implements AfterContentInit {
     @ContentChildren(CarouselComponent)
-    carouselItemsList: QueryList<CarouselComponent>;
+    public carouselItemsList: QueryList<CarouselItemComponent>;
     @Input()
-    delayBy: number;
+    public delayBy: number;
 
     ngAfterContentInit(): void {
-        throw new Error('Method not implemented.');
+        const carouselItems = this.carouselItemsList.toArray();
+        let count = 0;
+        const max = carouselItems.length;
+
+        setInterval(() => {
+            const current = count % max;
+            carouselItems.forEach((item) => item.isActive = false);
+            carouselItems[current].isActive = true;
+            count++;
+        }, this.delayBy);
     }
 
 }

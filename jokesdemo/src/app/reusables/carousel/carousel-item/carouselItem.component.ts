@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     templateUrl: './carouselItem.component.html'
 })
 export class CarouselItemComponent {
-    isActive = false;
+    public isActive = false;
 
 }
 

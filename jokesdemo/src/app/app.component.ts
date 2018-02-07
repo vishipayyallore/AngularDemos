@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { JokeData } from './models/joke.data';
+import { CarouselComponent } from './reusables/carousel/carousel.component';
+import { CarouselItemComponent } from './reusables/carousel/carousel-item/carouselItem.component';
 
 @Component({
   selector: 'app-root',
