@@ -8,7 +8,7 @@ import { CarouselItemComponent } from './carousel-item/carouselItem.component';
     templateUrl: './carousel.component.html'
 })
 export class CarouselComponent implements AfterContentInit {
-    @ContentChildren(CarouselComponent)
+    @ContentChildren(CarouselItemComponent)
     public carouselItemsList: QueryList<CarouselItemComponent>;
     @Input()
     public delayBy: number;
