@@ -1,3 +1,3 @@
-<div class="carousel-item text-center" [hidden]="!isActive">
+<div class="carousel-item text-center" *ngIf="isActive">
     <ng-content></ng-content>
 </div>
