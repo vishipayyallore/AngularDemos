@@ -13,6 +13,8 @@ import { FooterComponent } from './reusables/footer/footer.component';
 import { JokeListComponent } from './jokes/jokeslist/jokelist.component';
 import { JokeComponent } from './jokes/joke/joke.component';
 import { JokeFormComponent } from './jokes/jokeform/jokeform.component';
+import { CarouselItemComponent } from './reusables/carousel/carousel-item/carouselItem.component';
+import { CarouselComponent } from './reusables/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { JokeFormComponent } from './jokes/jokeform/jokeform.component';
     FooterComponent,
     JokeComponent,
     JokeListComponent,
-    JokeFormComponent
+    JokeFormComponent,
+    CarouselItemComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
