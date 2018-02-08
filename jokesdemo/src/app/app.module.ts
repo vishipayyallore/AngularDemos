@@ -15,6 +15,7 @@ import { JokeComponent } from './jokes/joke/joke.component';
 import { JokeFormComponent } from './jokes/jokeform/jokeform.component';
 import { CarouselItemComponent } from './reusables/carousel/carousel-item/carouselItem.component';
 import { CarouselComponent } from './reusables/carousel/carousel.component';
+import { JokesComponent } from './jokes/jokes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CarouselComponent } from './reusables/carousel/carousel.component';
     JokeListComponent,
     JokeFormComponent,
     CarouselItemComponent,
-    CarouselComponent
+    CarouselComponent,
+    JokesComponent
   ],
   imports: [
     BrowserModule,
