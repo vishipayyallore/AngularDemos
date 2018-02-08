@@ -16,6 +16,7 @@ import { JokeFormComponent } from './jokes/jokeform/jokeform.component';
 import { CarouselItemComponent } from './reusables/carousel/carousel-item/carouselItem.component';
 import { CarouselComponent } from './reusables/carousel/carousel.component';
 import { JokesComponent } from './jokes/jokes.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { JokesComponent } from './jokes/jokes.component';
     MatIconModule,
     MatSidenavModule,
     MatSlideToggleModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
