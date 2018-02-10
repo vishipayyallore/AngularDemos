@@ -17,6 +17,7 @@ import { CarouselItemComponent } from './reusables/carousel/carousel-item/carous
 import { CarouselComponent } from './reusables/carousel/carousel.component';
 import { JokesComponent } from './jokes/jokes.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NgForDemoComponent } from './directivesdemo/ngfordemo/ngfordemo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
     JokeFormComponent,
     CarouselItemComponent,
     CarouselComponent,
-    JokesComponent
+    JokesComponent,
+    NgForDemoComponent
   ],
   imports: [
     BrowserModule,
