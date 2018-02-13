@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Person } from '../../models/person.data';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./ngfordemo.component.css']
 })
 export class NgForDemoComponent {
-    people: any[] = [
+    people: Person[] = [
         { 'name': 'Shiva Sai' },
         { 'name': 'Mathew Phlips' },
         { 'name': 'Douglas  Pace' },
