@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Person } from '../../models/person.data';
-
+import { People } from '../../models/people.data';
 
 @Component({
     selector: 'app-ngfor-demo',
@@ -17,4 +17,13 @@ export class NgForDemoComponent {
         { 'name': 'Aguirre  Ellis' },
         { 'name': 'Cook  Tyson' }
     ];
+
+    peopleList: Array<People> = [
+        { country: 'UK', peoplesList: [{ 'name': 'Shiva Sai' }, { 'name': 'Mathew Phlips' }] },
+        {
+            country: 'US', peoplesList: [{ 'name': 'Mcleod  Mueller' }, { 'name': 'Day  Meyers' }, { 'name': 'Aguirre  Ellis' },
+            { 'name': 'Cook  Tyson' }]
+        }
+    ];
+
 }

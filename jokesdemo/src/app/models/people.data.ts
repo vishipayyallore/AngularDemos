@@ -1,3 +1,4 @@
+import { Person } from './person.data';
 
 
 export class People {
