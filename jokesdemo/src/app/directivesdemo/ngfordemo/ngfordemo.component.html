@@ -11,6 +11,18 @@
           {{iCtr + 1}} - {{person.name}}
         </li>
       </ul>
+
+      <div>
+        <h4>NgFor (groupd)</h4>
+        <ul *ngFor="let peopleByCountry of peopleList">
+          <li>{{peopleByCountry.country}}</li>
+          <ul>
+            <li *ngFor="let person of peopleByCountry.peoplesList; let iCtr=index">
+              {{iCtr + 1}} - {{person.name}}
+            </li>
+          </ul>
+        </ul>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
