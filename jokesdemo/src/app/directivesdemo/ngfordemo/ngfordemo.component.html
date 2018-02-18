@@ -6,9 +6,9 @@
     </mat-card-header>
     <mat-card-content>
       <div class="one">
-          <h4>NgFor </h4>
+        <h4>NgFor </h4>
         <ul *ngFor="let person of people; let iCtr=index">
-          <li>
+          <li style="color:blue">
             {{iCtr + 1}} - {{person.name}}
             <span>Age:
               <span *ngIf="person.age < 30">{{person.age}}</span>
@@ -18,13 +18,23 @@
       </div>
 
       <div class="two">
-          <h4>NgFor (grouped)</h4>
+        <h4>NgFor (grouped)</h4>
         <ul *ngFor="let peopleByCountry of peopleList">
           <li>{{peopleByCountry.country}}</li>
-          <ul>
-            <li *ngFor="let person of peopleByCountry.peoplesList; let iCtr=index">
+          <ul *ngFor="let person of peopleByCountry.peoplesList; let iCtr=index" [ngSwitch]="peopleByCountry.country">
+            <li *ngSwitchCase="'US'" style="color:brown">
               {{iCtr + 1}} - {{person.name}}
             </li>
+            <li *ngSwitchCase="'UK'" style="color:cornflowerblue">
+              {{iCtr + 1}} - {{person.name}}
+            </li>
+            <li *ngSwitchCase="'HK'" style="color:darkblue">
+              {{iCtr + 1}} - {{person.name}}
+            </li>
+            <li *ngSwitchCase="'XX'" style="color:darkgoldenrod">
+              {{iCtr + 1}} - {{person.name}}
+            </li>
+
           </ul>
         </ul>
       </div>
