@@ -2,19 +2,23 @@
   <mat-card class="example-card">
     <mat-card-header>
       <mat-card-title>
-        <b style="color: blue">NgFor Demo</b>
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <ul *ngFor="let person of people; let iCtr=index">
-        <li>
-          {{iCtr + 1}} - {{person.name}}
-          <span>Age: <span *ngIf="person.age < 30">{{person.age}}</span> </span>
-        </li>
-      </ul>
+      <div class="one">
+          <h4>NgFor </h4>
+        <ul *ngFor="let person of people; let iCtr=index">
+          <li>
+            {{iCtr + 1}} - {{person.name}}
+            <span>Age:
+              <span *ngIf="person.age < 30">{{person.age}}</span>
+            </span>
+          </li>
+        </ul>
+      </div>
 
-      <div>
-        <h4>NgFor (groupd)</h4>
+      <div class="two">
+          <h4>NgFor (grouped)</h4>
         <ul *ngFor="let peopleByCountry of peopleList">
           <li>{{peopleByCountry.country}}</li>
           <ul>
