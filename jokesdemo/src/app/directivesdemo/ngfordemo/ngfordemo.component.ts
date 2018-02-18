@@ -27,9 +27,17 @@ export class NgForDemoComponent {
         {
             country: 'US', peoplesList: [
                 { 'name': 'Mcleod  Mueller', age: 27 },
-                { 'name': 'Day  Meyers', age: 28 },
+                { 'name': 'Day  Meyers', age: 28 }]
+        },
+        {
+            country: 'HK', peoplesList: [
                 { 'name': 'Aguirre  Ellis', age: 29 },
                 { 'name': 'Cook  Tyson', age: 30 }]
+        },
+        {
+            country: 'XX', peoplesList: [
+                { 'name': 'XX Aguirre  Ellis', age: 29 },
+                { 'name': 'XX Cook  Tyson', age: 30 }]
         }
     ];
 
