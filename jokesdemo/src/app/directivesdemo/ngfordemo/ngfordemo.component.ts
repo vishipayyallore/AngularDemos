@@ -8,7 +8,8 @@ import { People } from '../../models/people.data';
     styleUrls: ['./ngfordemo.component.css']
 })
 export class NgForDemoComponent {
-    public fontColor = 'red';
+    fontColor = 'red';
+    backgroundColor = '#ABCDEF';
 
     people: Person[] = [
         { 'name': 'Shiva Sai', age: 25 },

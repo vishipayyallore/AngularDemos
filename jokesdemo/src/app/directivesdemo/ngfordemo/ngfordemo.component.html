@@ -22,7 +22,7 @@
         <ul *ngFor="let peopleByCountry of peopleList">
           <li [style.color]="fontColor">{{peopleByCountry.country}}</li>
           <ul *ngFor="let person of peopleByCountry.peoplesList; let iCtr=index">
-            <li [ngStyle]="{'color': peopleByCountry.backGroundColor}">
+            <li [ngStyle]="{'color': peopleByCountry.backGroundColor}" [style.background-color]="backgroundColor">
               {{iCtr + 1}} - {{person.name}}
             </li>
           </ul>
