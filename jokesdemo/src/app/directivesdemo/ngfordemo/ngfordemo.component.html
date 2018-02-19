@@ -20,7 +20,7 @@
       <div class="two">
         <h4>NgFor (grouped)</h4>
         <ul *ngFor="let peopleByCountry of peopleList">
-          <li>{{peopleByCountry.country}}</li>
+          <li [style.color]="fontColor">{{peopleByCountry.country}}</li>
           <ul *ngFor="let person of peopleByCountry.peoplesList; let iCtr=index">
             <li [ngStyle]="{'color': peopleByCountry.backGroundColor}">
               {{iCtr + 1}} - {{person.name}}
