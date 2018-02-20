@@ -18,7 +18,7 @@
       </div>
 
       <div class="two">
-        <h4>NgFor (grouped)</h4>
+        <h4 ngNonBindable>{{NgFor}} Grouped</h4>
         <ul *ngFor="let peopleByCountry of peopleList">
           <li [style.color]="fontColor" [ngStyle]="{'font-size.px':18}">{{peopleByCountry.country}}</li>
           <ul *ngFor="let person of peopleByCountry.peoplesList; let iCtr=index">
