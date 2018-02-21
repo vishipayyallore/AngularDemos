@@ -6,12 +6,15 @@
     </mat-card-header>
     <mat-card-content>
       <div *ngFor="let article of articles">
-        <div [ngClass]="{
+        <mat-card [ngClass]="{
             'cardOutlinePrimary': article.kind == 'text',
             'cardOutlineDanger': article.kind == 'image'
           }">
-          <h4>{{article.title}}</h4>
-        </div>
+          <mat-card-content>
+            <h4>{{article.title}}</h4>
+          </mat-card-content>
+        </mat-card>
+        <br>
       </div>
     </mat-card-content>
   </mat-card>

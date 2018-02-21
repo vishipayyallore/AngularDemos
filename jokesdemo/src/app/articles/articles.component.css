@@ -9,21 +9,19 @@
 }
 
 .cardOutlinePrimary {
-  width: 400px;
+  width: 350px;
   margin-top: 10px;
   padding-top: 10px;
-  border-color: rgb(11, 14, 230);
+  border-color: chartreuse;
   border-style: solid;
-  background: rgb(223, 238, 247);
-  margin-left: 120px;
+  background: cornflowerblue;
 }
 
 .cardOutlineDanger {
-  width: 400px;
+  width: 350px;
   margin-top: 10px;
   padding-top: 10px;
-  border-color: rgb(11, 14, 230);
+  border-color: brown;
   border-style: solid;
-  background: rgb(223, 238, 247);
-  margin-left: 120px;
+  background: darkkhaki;
 }
