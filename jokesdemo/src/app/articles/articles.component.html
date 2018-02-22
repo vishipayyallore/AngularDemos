@@ -11,10 +11,8 @@
             'cardOutlineDanger': article.kind === 'image'
           }">
           <mat-card-content>
-            <h4>{{article.title}}</h4>
-            <span>{{article.date | date:'short'}}</span>
+            <span><b>{{article.title}}</b> {{article.date | date:'short'}}</span>
             <p *ngIf="article.kind == 'text'">{{ article.content }}</p>
-
             <img class="card-img-bottom img-fluid" *ngIf="article.kind == 'image'" src="{{ article.content }}">
           </mat-card-content>
         </mat-card>
