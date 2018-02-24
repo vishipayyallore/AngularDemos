@@ -19,6 +19,7 @@ import { JokesComponent } from './jokes/jokes.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgForDemoComponent } from './directivesdemo/ngfordemo/ngfordemo.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { JokeHoverDirective } from './customdirectives/jokehover.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ArticlesComponent } from './articles/articles.component';
     CarouselComponent,
     JokesComponent,
     NgForDemoComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    JokeHoverDirective
   ],
   imports: [
     BrowserModule,

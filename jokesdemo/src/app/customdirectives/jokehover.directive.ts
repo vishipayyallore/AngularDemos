@@ -1,12 +1,12 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 
 @Directive({
-    selector: '[appjokeHover]'
+    selector: '[appJokeHover]'
 })
 export class JokeHoverDirective {
-    constructor() {
-
+    constructor(private elementReference: ElementRef) {
+        elementReference.nativeElement.style.backgroundColor = 'yellow';
     }
 
 }
