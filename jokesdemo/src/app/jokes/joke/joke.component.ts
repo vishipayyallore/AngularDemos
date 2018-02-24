@@ -5,6 +5,8 @@ import {
     AfterViewChecked, OnDestroy, SimpleChanges
 } from '@angular/core';
 
+import { JokeHoverDirective } from '../../customdirectives/jokehover.directive';
+
 @Component({
     selector: 'app-jokeitem',
     templateUrl: './joke.component.html',
