@@ -14,7 +14,7 @@ export class JokeHoverDirective {
     @HostListener('mousehover')
     onMouseHover() {
         const part = this.elementReference.nativeElement.querySelector('.storyline') ;
-        this.renderer.setElementStyle(part, 'display', 'block');
+        this.renderer.setElementStyle(part, 'backgroundColor', 'yellow');
     }
 
 }
