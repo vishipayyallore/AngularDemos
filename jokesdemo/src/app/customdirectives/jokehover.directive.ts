@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer } from '@angular/core';
+import { Directive, ElementRef, Renderer, HostListener } from '@angular/core';
 
 
 @Directive({
@@ -6,9 +6,14 @@ import { Directive, ElementRef, Renderer } from '@angular/core';
 })
 export class JokeHoverDirective {
     constructor(private elementReference: ElementRef,
-                private renderer: Renderer) {
+        private renderer: Renderer) {
         // elementReference.nativeElement.style.backgroundColor = 'yellow';
-        renderer.setElementStyle(elementReference.nativeElement, 'backgroundColor', 'yellow');
+        // renderer.setElementStyle(elementReference.nativeElement, 'backgroundColor', 'yellow');
+    }
+
+    @HostListener('mousehover')
+    onMouseHover() {
+
     }
 
 }
