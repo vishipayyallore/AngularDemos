@@ -13,7 +13,8 @@ export class JokeHoverDirective {
 
     @HostListener('mousehover')
     onMouseHover() {
-
+        let part = this.elementReference.nativeElement.querySelector('storyline') ;
+        this.renderer.setElementStyle(part, 'display', 'block');
     }
 
 }
