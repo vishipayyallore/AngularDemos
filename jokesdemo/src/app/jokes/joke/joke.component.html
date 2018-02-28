@@ -1,7 +1,7 @@
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title>
-      <b style="color: blue">{{joke.setup}}</b>
+      <b class="jokeSetup">{{joke.setup}}</b>
        <mat-slide-toggle style="margin-left:40px" class="primary" [checked]="joke.hide" (change)="joke.toggle()">Show Content!</mat-slide-toggle>
        <button mat-raised-button color="warn" style="margin-left:40px" (click)="onJokeDeleted(joke)">Delete</button>
     </mat-card-title>
