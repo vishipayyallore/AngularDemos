@@ -12,7 +12,7 @@ export class JokeOverDirective {
     }
 
     @HostListener('mouseover')
-    onMouseHover() {
+    onMouseOver() {
         const part = this.elementReference.nativeElement.querySelector('.storyline') ;
         this.renderer.setElementStyle(part, 'backgroundColor', 'yellow');
     }
