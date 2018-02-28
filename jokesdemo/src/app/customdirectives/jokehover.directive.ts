@@ -2,16 +2,16 @@ import { Directive, ElementRef, Renderer, HostListener } from '@angular/core';
 
 
 @Directive({
-    selector: '[appJokeHover]'
+    selector: '[appJokeOver]'
 })
-export class JokeHoverDirective {
+export class JokeOverDirective {
     constructor(private elementReference: ElementRef,
         private renderer: Renderer) {
         // elementReference.nativeElement.style.backgroundColor = 'yellow';
         // renderer.setElementStyle(elementReference.nativeElement, 'backgroundColor', 'yellow');
     }
 
-    @HostListener('mousehover')
+    @HostListener('mouseover')
     onMouseHover() {
         const part = this.elementReference.nativeElement.querySelector('.storyline') ;
         this.renderer.setElementStyle(part, 'backgroundColor', 'yellow');
