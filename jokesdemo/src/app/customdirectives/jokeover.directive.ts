@@ -1,10 +1,12 @@
-import { Directive, ElementRef, Renderer, HostListener } from '@angular/core';
+import { Directive, ElementRef, Renderer, HostListener, HostBinding } from '@angular/core';
 
 
 @Directive({
     selector: '[appJokeOver]'
 })
 export class JokeOverDirective {
+    @HostBinding('class.borderColor')
+    private isHovering: boolean;
 
     constructor(private elementReference: ElementRef,
         private renderer: Renderer) {
@@ -14,12 +16,14 @@ export class JokeOverDirective {
     onMouseOver() {
         const part = this.elementReference.nativeElement.querySelector('.storyline');
         this.renderer.setElementStyle(part, 'backgroundColor', 'yellow');
+        this.isHovering = true;
     }
 
     @HostListener('mouseout')
     onMouseOut() {
         const part = this.elementReference.nativeElement.querySelector('.storyline');
         this.renderer.setElementStyle(part, 'backgroundColor', 'white');
+        this.isHovering = false;
     }
 
 }

@@ -10,3 +10,8 @@
 .jokeSetup {
   color: blue;
 }
+
+.borderColor {
+  border-color: blueviolet;
+  border-style: solid;
+}
