@@ -18,4 +18,10 @@ export class JokeOverDirective {
         this.renderer.setElementStyle(part, 'backgroundColor', 'yellow');
     }
 
+    @HostListener('mouseout')
+    onMouseOut() {
+        const part = this.elementReference.nativeElement.querySelector('.storyline');
+        this.renderer.setElementStyle(part, 'backgroundColor', 'white');
+    }
+
 }
