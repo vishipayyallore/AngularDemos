@@ -15,7 +15,7 @@ export class JokeOverDirective {
     @HostListener('mouseover')
     onMouseOver() {
         const part = this.elementReference.nativeElement.querySelector('.storyline');
-        this.renderer.setElementStyle(part, 'backgroundColor', 'yellow');
+        this.renderer.setElementStyle(part, 'backgroundColor', 'cornflowerblue');
         this.isHovering = true;
     }
 
