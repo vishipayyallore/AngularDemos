@@ -1,8 +1,9 @@
 'use strict';
 
 const gulp = require('gulp');
-const del = require('del');
 const typescript = require('gulp-typescript');
+const sourcemaps = require('gulp-sourcemaps');
+const del = require('del');
 const tscConfig = require('./tsconfig.json');
 
 // clean the contents of the distribution directory
