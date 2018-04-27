@@ -21,5 +21,11 @@ gulp.task('compile', ['clean'], function () {
     .pipe(gulp.dest('dist/app'));
 });
 
-gulp.task('build', ['compile']);
+// copy static assets - i.e. non TypeScript compiled source
+gulp.task('copy:assets', ['clean'], function() {
+  return gulp.src(['app/**/*', 'src/index.html', 'src/styles.css', '!app/**/*.ts'], { base : './' })
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['compile', 'copy:assets']);
 gulp.task('default', ['build']);
