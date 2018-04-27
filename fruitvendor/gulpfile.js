@@ -15,7 +15,9 @@ gulp.task('clean', function () {
 gulp.task('compile', ['clean'], function () {
   return gulp
     .src('src/**/*.ts')
+    .pipe(sourcemaps.init())
     .pipe(typescript(tscConfig.compilerOptions))
+    .pipe(sourcemaps.write('.'))  
     .pipe(gulp.dest('dist/app'));
 });
 
