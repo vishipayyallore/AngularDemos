@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
 
-  const applicationTitle = 'Welcome to Fruit Vendors!';
+  const applicationTitle = 'Welcome to Fruit Vendors';
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
